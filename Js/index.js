@@ -1,0 +1,8 @@
+
+
+function teste() {
+    alert('Teste');
+}
+
+
+
