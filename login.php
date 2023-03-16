@@ -8,7 +8,7 @@
     <!-- Essa referencia é pra estilização externa -->
     <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" > </link>
     <!-- aqui falta coloca ro caminho completo: "css/styles.css" -->
-    <!--<link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id = "login-container">
