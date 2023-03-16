@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
     <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" > </link>
-    <link rel = "stylesheet" href = "css/styles.css"></link>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id = "login-container">
@@ -14,7 +14,24 @@
         <form action = "">
             <label for ="email">E-mail</label>
         <input type ="email" name = "email" id = "email" placeholder="Digite seu e-mail" autocomplete="off" >
-        </form>
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha">
+        <a href="#" id="forgot-pass">Esqueceu a senha?</a>
+        <input type="submit" value = "Login">
+    </form>
+        <div id = "social-container">
+            <p> Ou entre usando suas redes sociais</p>
+            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-linkedin"></i>
+
+
+        </div>
+        <div id="regiter-container">
+            <p> Ainda não tem uma conta?</p>
+            <a href="#">Registrar</a>
+
+        </div>
+   
     </div>
 </body>
 </html>
