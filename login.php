@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
     <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" > </link>
-    <link rel = "stylesheet" href = "css/styles.css"></link>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id = "login-container">
@@ -24,6 +24,11 @@
             <i class="fa fa-facebook-f"></i>
             <i class="fa fa-linkedin"></i>
 
+
+        </div>
+        <div id="regiter-container">
+            <p> Ainda não tem uma conta?</p>
+            <a href="#">Registrar</a>
 
         </div>
    
