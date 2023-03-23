@@ -19,18 +19,74 @@
     <!-- Custom styles personal -->
     <link href="css/index.css" rel="stylesheet">
     <style>
+         .display{
+            display: block;
+        }
+    
+        
+        /*estilo de botões*/
+        .btn{
+            border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+    background:  #787878;;
+    position: relative;
+    left: 82px;
+    top:20px;
+    border-radius: 1px;
+    width: 400px;
+    height: 40px;
+    color: white;
+    
+        }
+       
+        .btn2{
+            border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+    background:  #787878;
+    position: relative;
+    left: -78px;
+    top:70px;
+    border-radius: 1px;
+    width: 400px;
+    height: 40px;
+    color:white;
+
+
+        }
+       .btn:hover{
+        background: #5a5a5a;
+       }
+       .btn2:hover{
+        background: #5a5a5a;
+       }
+       
+       /*fim do estilo de botões*/
+
         .border {
             border: black solid 1px;
         }
 
         .display {
             display: flex !important;
+            width: -300px;
+            height: 300px;
+            background-color: #5a5a5a;
         }
 
         .barraesquerda {
             width: 25%;
             margin: 7px;
+            height: 285px;
             border-radius: 5px;
+            background-color: #3c3c3c;
         }
 
         .feed {
@@ -48,7 +104,7 @@
 <body>
     <main>
         <!-- esexmplo de como fazer um botão chamar uma função js -->
-        <button onclick="teste()">Teste</button>
+       
 
 
         <!-- todo conteudo do blog ficara dentro da tag DIV -->
