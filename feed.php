@@ -6,7 +6,7 @@
     include("db.php");
     include("mostrarerros.php");
 
-    $sql = "SELECT id, idusuario, titulo, texto, nomeusuario FROM blog.posts";
+    $sql = "SELECT id, idusuario, titulo, texto, nomeusuario FROM blog.posts order by id DESC";
     $result = $conn->query($sql);
     // Verifica se há resultados
     if ($result->num_rows > 0) {
