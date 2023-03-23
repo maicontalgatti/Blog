@@ -19,56 +19,86 @@
     <!-- Custom styles personal -->
     <link href="css/index.css" rel="stylesheet">
     <style>
-         .display{
+        .display {
             display: block;
         }
-    
-        
+
+        .titulopost {
+            height: 20px;
+        }
+
+        .textopost {
+            margin-top: 5px;
+            height: 40px;
+
+        }
+
         /*estilo de botões*/
-        .btn{
+        .btn {
             border: none;
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: .3s;
-    border-radius: 5px;
-    background:  #787878;;
-    position: relative;
-    left: 82px;
-    top:20px;
-    border-radius: 1px;
-    width: 400px;
-    height: 40px;
-    color: white;
-    
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 5px;
+            background: #787878;
+            ;
+            position: relative;
+            left: 82px;
+            top: 20px;
+            border-radius: 1px;
+            width: 400px;
+            height: 40px;
+            color: white;
+
         }
-       
-        .btn2{
+
+        .postagem {
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 5px;
+            background: #787878;
+            /* position: relative; */
+            /* left: 30px; */
+            /* right: 30px; */
+            /* top: 20px; */
+            margin: 15px;
+            border-radius: 1px;
+            width: 100%;
+            height: 70px;
+            color: white;
+        }
+
+        .btn2 {
             border: none;
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: .3s;
-    border-radius: 5px;
-    background:  #787878;
-    position: relative;
-    left: -78px;
-    top:70px;
-    border-radius: 1px;
-    width: 400px;
-    height: 40px;
-    color:white;
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 5px;
+            background: #787878;
+            position: relative;
+            left: -78px;
+            top: 70px;
+            border-radius: 1px;
+            width: 400px;
+            height: 40px;
+            color: white;
 
 
         }
-       .btn:hover{
-        background: #5a5a5a;
-       }
-       .btn2:hover{
-        background: #5a5a5a;
-       }
-       
-       /*fim do estilo de botões*/
+
+        .btn:hover {
+            background: #5a5a5a;
+        }
+
+        .btn2:hover {
+            background: #5a5a5a;
+        }
+
+        /*fim do estilo de botões*/
 
         .border {
             border: black solid 1px;
@@ -77,14 +107,14 @@
         .display {
             display: flex !important;
             width: -300px;
-            height: 300px;
+            height: 900px;
             background-color: #5a5a5a;
         }
 
         .barraesquerda {
             width: 25%;
             margin: 7px;
-            height: 285px;
+            height: 100%;
             border-radius: 5px;
             background-color: #3c3c3c;
         }
@@ -92,6 +122,9 @@
         .feed {
             width: 75%;
             margin: 7px;
+            border-radius: 5px;
+            background-color: #3c3c3c;
+            height: 100%;
         }
 
         #main {
@@ -104,7 +137,7 @@
 <body>
     <main>
         <!-- esexmplo de como fazer um botão chamar uma função js -->
-       
+
 
 
         <!-- todo conteudo do blog ficara dentro da tag DIV -->
