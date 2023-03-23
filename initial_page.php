@@ -30,7 +30,6 @@
         .textopost {
             margin-top: 5px;
             height: 40px;
-
         }
 
         /*estilo de botões*/
@@ -51,24 +50,6 @@
             height: 40px;
             color: white;
 
-        }
-
-        .postagem {
-            padding: 10px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: .3s;
-            border-radius: 5px;
-            background: #787878;
-            /* position: relative; */
-            /* left: 30px; */
-            /* right: 30px; */
-            /* top: 20px; */
-            margin: 15px;
-            border-radius: 1px;
-            width: 100%;
-            height: 70px;
-            color: white;
         }
 
         .btn2 {
@@ -125,6 +106,28 @@
             border-radius: 5px;
             background-color: #3c3c3c;
             height: 100%;
+            position:relative;
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .postagem {
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 5px;
+            background: #787878;
+            position: relative;
+            /* left: 30px; */
+            /* right: 30px; */
+            /* top: 20px; */
+            margin: 0px;
+            border-radius: 1px;
+            width: 95%;
+            height: 70px;
+            color: white;
         }
 
         #main {
