@@ -1,6 +1,6 @@
 <html>
 
-<div class="display feed border">
+<div class="feed border">
 
     <?php
     include("db.php");
@@ -20,9 +20,9 @@
                 <div class="textopost border">
                     <p style="margin:0px">' . $row['texto'] . '</p>
                 </div>
-            </div>';
-        }
-        echo "</table>";
+            </div>
+            <br>';
+        } 
     } else {
         echo "Não há resultados.";
     }
