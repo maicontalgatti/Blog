@@ -10,8 +10,7 @@
 
 </style>
 <div class="display barraesquerda border"> 
-
-                
+               
     <button class = "btn" onclick="teste()">Publicar</button>
     <button class = "btn2" onclick="teste()">Sair</button>
 
