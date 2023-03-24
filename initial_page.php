@@ -2,6 +2,9 @@
 <html lang="pt">
 <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout -->
 
+<?php 
+session_start();
+?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,7 +45,7 @@
             cursor: pointer;
             transition: .3s;
             border-radius: 5px;
-            background: #787878; 
+            background: #787878;
             position: relative;
             /* left: 82px; */
             /* top: 20px; */
@@ -52,7 +55,7 @@
             color: white;
 
         }
-  
+
 
         .btn:hover {
             background: #5a5a5a;
@@ -120,16 +123,14 @@
             <!-- coluna esquerda (botões de postar, etc) -->
 
             <?php
-            
+
             include 'barra_lateral.php';
-            if($_GET['modulo']=='perfil'){
+            if ($_GET['modulo'] == 'perfil') {
                 include 'perfil.php';
-            }else{
-         
+            } else {
                 include 'feed.php';
-            
-            }   
-            
+            }
+
             ?>
 
 
@@ -157,6 +158,8 @@
                 <form method='post' action='processa_postagem.php'>
                     <div class="modal-body">
 
+                    <input style='display:none' name='usuario' value=<?php echo $_SESSION['usuario']?> type="text" class="form-control" >
+                    <input style='display:none' name='idusuario' value=<?php echo $_SESSION['idusuario']?> type="text" class="form-control" >
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Título:</label>
                             <input name='titulo' type="text" class="form-control" id="recipient-name">
