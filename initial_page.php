@@ -21,6 +21,7 @@
     <!-- Custom styles personal -->
     <link href="css/index.css" rel="stylesheet">
     <style>
+        
         .display {
             display: block;
         }
@@ -28,7 +29,11 @@
         .titulopost {
             height: 20px;
         }
-
+        /*style do pefil.php*/
+        .title{
+        color:#787878 ;
+        /*fim do estilo perfil.php*/
+    }
         .textopost {
             margin-top: 5px;
             height: 40px;
