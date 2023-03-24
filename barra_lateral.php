@@ -10,6 +10,11 @@
         <button type="button" class="btn" onclick="sair()">Sair</button>
     </div>
 
+    <br>
+    <div>
+        <button type="button" class="btn" onclick="perfil()">Perfil</button>
+    </div>
+
 
 
 
@@ -17,6 +22,9 @@
 <script>
     function sair() {
         window.location.href = "login.php";
+    }
+    function perfil() {
+        window.location.href = "initial_page.php?modulo=perfil";
     }
 </script>
 

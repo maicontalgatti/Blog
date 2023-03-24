@@ -15,7 +15,7 @@ se ver bem, eu coloquei um IF no initial_page  -->
 //deixei um exemplo de select no aquivo "examples_db"
 
 
-
+echo '<p style="color:white">Aba de perfil</p>';
 
 
 
