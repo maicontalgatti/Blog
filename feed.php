@@ -9,20 +9,18 @@
     $sql = "SELECT id, idusuario, titulo, texto, nomeusuario FROM blog.posts order by id DESC";
     $result = $conn->query($sql);
     // Verifica se há resultados
+ 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
             echo '
-            <div class="postagem border">
-                <div class="titulopost border">
-                <p style="margin:0px"> ' . $row['nomeusuario'] . ' - ' . $row['titulo'] . ' </p> 
-                </div>
-                <div class="textopost border">
-                    <p style="margin:0px">' . $row['texto'] . '</p>
-                </div>
-            </div>
-            <br>';
-        } 
+            <div class="postagem border card-body d-flex flex-column align-items-start"> 
+            <h4 class="mb-0">
+                 ' . $row['nomeusuario'] . ' - ' . $row['titulo'] . '
+               </h4>
+               <p class="card-text mb-auto"> ' . $row['texto'] . '</p>
+                </div> ';
+        }
     } else {
         echo "Não há resultados.";
     }
