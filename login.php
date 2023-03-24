@@ -28,8 +28,7 @@
             <!-- <p> Ou entre usando suas redes sociais</p> -->
             <!-- <i class="fa fa-facebook-f"></i> -->
             <!-- <i class="fa fa-linkedin"></i> -->
-
-
+ 
         </div>
         <div id="regiter-container">
             <p> Ainda não tem uma conta?</p>

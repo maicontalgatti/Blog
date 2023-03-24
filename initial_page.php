@@ -42,36 +42,17 @@
             cursor: pointer;
             transition: .3s;
             border-radius: 5px;
-            background: #787878;
-            ;
+            background: #787878; 
             position: relative;
-            left: 82px;
-            top: 20px;
+            /* left: 82px; */
+            /* top: 20px; */
             border-radius: 1px;
-            width: 400px;
+            width: 100%;
             height: 40px;
             color: white;
 
         }
-
-        .btn2 {
-            border: none;
-            padding: 10px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: .3s;
-            border-radius: 5px;
-            background: #787878;
-            position: relative;
-            left: -78px;
-            top: 70px;
-            border-radius: 1px;
-            width: 400px;
-            height: 40px;
-            color: white;
-
-
-        }
+  
 
         .btn:hover {
             background: #5a5a5a;
@@ -114,9 +95,9 @@
             padding-right: 15px;
         }
 
-        .postagem { 
-            background: #787878; 
-            margin-bottom: 15px; 
+        .postagem {
+            background: #787878;
+            margin-bottom: 15px;
         }
 
         #main {
@@ -139,9 +120,19 @@
             <!-- coluna esquerda (botões de postar, etc) -->
 
             <?php
+            
             include 'barra_lateral.php';
-            include 'feed.php';
+            if($_GET['modulo']=='perfil'){
+                include 'perfil.php';
+            }else{
+         
+                include 'feed.php';
+            
+            }   
+            
             ?>
+
+
         </div>
 
 
