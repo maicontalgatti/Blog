@@ -114,24 +114,9 @@
             padding-right: 15px;
         }
 
-        .postagem {
-
-            /* padding: 10px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: .3s;
-            border-radius: 5px;*/
+        .postagem { 
             background: #787878; 
-            margin-bottom: 15px;
-            /* position: relative; */
-            /* left: 30px; */
-            /* right: 30px; */
-            /* top: 20px; */
-            /* margin: 0px; */
-            /* border-radius: 1px; */
-            /* width: 95%; */
-            /* height: 70px; */
-            /* color: white; */
+            margin-bottom: 15px; 
         }
 
         #main {
