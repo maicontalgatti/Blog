@@ -1,6 +1,12 @@
 <html>
 
-<div class="feed border">
+<div id="wrapper" class="feed border">
+    <header class="user info">
+        <h1>Usuário</h1>
+
+    </header>
+
+
    
 <!-- monta tudo dentro daqui.
 isso é só um módulo funcionando da mesma maneira que o arquivo 'feed'.
