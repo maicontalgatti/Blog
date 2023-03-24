@@ -1,9 +1,17 @@
 <html>
 
-<div class="display barraesquerda border">
+<div class="display barraesquerda border" style='display:block!important;padding:15px'>
 
-    <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" class="btn" id='btn-postagem'>Publicar</button>
-    <button class="btn2" onclick="sair()">Sair</button>
+    <div>
+        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" id='btn-postagem'>Publicar</button>
+    </div>
+    <br>
+    <div>
+        <button type="button" class="btn" onclick="sair()">Sair</button>
+    </div>
+
+
+
 
 </div>
 <script>

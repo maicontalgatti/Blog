@@ -9,6 +9,9 @@ if ($conn) {
     $query = mysqli_query($conn, "select * from usuario where email='".$nome."' and senha='".$senha."' ");   
     if (mysqli_num_rows($query) > 0) { 
        echo "Login bem sucedido!"; 
+       session_start();
+
+    //    $_SESSION['usuario'] = ''
        Header('Location: initial_page.php');
     } else {
         //O login falhou
