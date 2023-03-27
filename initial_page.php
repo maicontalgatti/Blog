@@ -2,9 +2,10 @@
 <html lang="pt">
 <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout -->
 
-<?php 
+<?php
 session_start();
 ?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +25,6 @@ session_start();
     <!-- Custom styles personal -->
     <link href="css/index.css" rel="stylesheet">
     <style>
-        
         .display {
             display: block;
         }
@@ -32,11 +32,13 @@ session_start();
         .titulopost {
             height: 20px;
         }
+
         /*style do pefil.php*/
-        .title{
-        color:#787878 ;
-        /*fim do estilo perfil.php*/
-    }
+        .title {
+            color: #787878;
+            /*fim do estilo perfil.php*/
+        }
+
         .textopost {
             margin-top: 5px;
             height: 40px;
@@ -132,6 +134,8 @@ session_start();
             include 'barra_lateral.php';
             if ($_GET['modulo'] == 'perfil') {
                 include 'perfil.php';
+            } else if ($_GET['modulo'] == 'amigos') {
+                include 'amigos.php';
             } else {
                 include 'feed.php';
             }
@@ -163,8 +167,8 @@ session_start();
                 <form method='post' action='processa_postagem.php'>
                     <div class="modal-body">
 
-                    <input style='display:none' name='usuario' value=<?php echo $_SESSION['usuario']?> type="text" class="form-control" >
-                    <input style='display:none' name='idusuario' value=<?php echo $_SESSION['idusuario']?> type="text" class="form-control" >
+                        <input style='display:none' name='usuario' value=<?php echo $_SESSION['usuario'] ?> type="text" class="form-control">
+                        <input style='display:none' name='idusuario' value=<?php echo $_SESSION['idusuario'] ?> type="text" class="form-control">
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Título:</label>
                             <input name='titulo' type="text" class="form-control" id="recipient-name">
