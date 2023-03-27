@@ -8,10 +8,11 @@ include("mostrarerros.php");
 
  
 
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="file" name="arquivo">
-        <input type="submit" name="enviar">
-    </form>
+   <!-- <form  class="frmupload" action="" method="post" enctype="multipart/form-data">
+       <label class="lblupload" style="color:#787878">Selecione uma foto de perfil</label>
+        <input  type="file" name="arquivo">
+        <input class="inputimg" type="submit" name="enviar">
+    </form>-->
 
     <?php
     if (isset($_POST['enviar'])) {
@@ -36,7 +37,7 @@ include("mostrarerros.php");
 
             $caminho = "uploads/";
             if (move_uploaded_file($nomeTemporario, $caminho . $nomeArquivo)) {
-                echo "Upload feito com sucesso";
+                //echo "Upload feito com sucesso";
                 
                 if ($conn) {
                     $sql = "UPDATE usuario SET foto_usuario = '".$nomeArquivo."' WHERE id=".$_SESSION['idusuario']." ";
@@ -120,7 +121,7 @@ include("mostrarerros.php");
 
             $caminho = "uploads/";
             if (move_uploaded_file($nomeTemporario, $caminho . $nomeImagem)) {
-                echo "Upload feito com sucesso";
+               // echo "Upload feito com sucesso";
             } else {
                 echo "Erro ao enviar";
             }
@@ -128,8 +129,17 @@ include("mostrarerros.php");
     }
 
     ?>
+<!-- Registro de uma gambiarra de iniciante
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br> -->
 
 
+<form  class="frmupload" action="" method="post" enctype="multipart/form-data">
+       <label class="lblupload" for="file" >Selecione uma foto de perfil</label>
+        <input id="file"  type="file" name="arquivo">
+        <input class="inputimg" type="submit" name="enviar">
 
 </div>
 
