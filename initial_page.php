@@ -36,8 +36,23 @@ session_start();
         /*style do pefil.php*/
         .title {
             color: #787878;
-            /*fim do estilo perfil.php*/
+
+         
         }
+        .inputimg{
+            top: 300px;
+        
+        }
+       
+        
+        
+        /*
+        .inputimg{
+            width: 200px;
+            
+        }*/
+            /*fim do estilo perfil.php*/
+        
 
         .textopost {
             margin-top: 5px;
@@ -70,12 +85,59 @@ session_start();
 
         .btn2:hover {
             background: #5a5a5a;
+
+        }
+        .inputimg:hover{
+            background: #5a5a5a;
+        
+        }
+        /* laber for file*/
+        input[type="file"]{
+            display: none;
+        }
+        .lblupload:hover{
+            background: #5a5a5a;
+        }
+       
+        .lblupload{
+            padding: 8px;
+            min-width: 250px;
+            max-width: 750px;
+            background: #787878;
+            color: white;
+            
+            cursor: pointer;
+            transition: .3s;
+            text-align: center;
+        }
+        /*fim da label for file*/
+        .inputimg{
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            
+            background: #787878;
+            
+            /* left: 82px; */
+            /* top: 20px; */
+            
+            min-width: 10%;
+            height: 40px;
+            color: white;
         }
 
         /*fim do estilo de botões*/
 
         .border {
             border: black solid 1px;
+        }
+        .frmupload{
+            align-self: flex-end;
+            margin-top: 32%;
+            margin-left: 53%;
+            min-width: 320px 603px ;
+            max-width:800px ;  
+                      
         }
 
         .display {
