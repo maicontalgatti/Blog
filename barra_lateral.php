@@ -34,6 +34,9 @@
     function perfil() {
         window.location.href = "initial_page.php?modulo=perfil";
     }
+    function amigos() {
+        window.location.href = "initial_page.php?modulo=amigos";
+    }
     function pagina_inicial() {
         window.location.href = "initial_page.php";
     }
