@@ -6,7 +6,7 @@
     include("db.php");
     include("mostrarerros.php");
 
-    $sql = "SELECT id, idusuario, titulo, texto, nomeusuario FROM blog.posts order by id DESC";
+    $sql = "SELECT id, email, senha, nome, datanascimento, foto_usuario FROM blog.usuario";
     $result = $conn->query($sql);
     // Verifica se há resultados
  
@@ -16,9 +16,9 @@
             echo '
             <div class="postagem border card-body d-flex flex-column align-items-start"> 
             <h4 class="mb-0">
-                 ' . $row['nomeusuario'] . ' - ' . $row['titulo'] . '
+                 ' . $row['nome'] . ' - ' . $row['email'] . '
                </h4>
-               <p class="card-text mb-auto"> ' . $row['texto'] . '</p>
+              <!--<p class="card-text mb-auto"></p>-->
                 </div> ';
         }
     } else {

@@ -11,11 +11,15 @@
     </div>
     <br>
     <div>
-        <button type="button" class="btn" onclick="sair()">Sair</button>
+        <button type="button" class="btn" onclick="perfil()">Perfil</button>
     </div>
     <br>
     <div>
-        <button type="button" class="btn" onclick="perfil()">Perfil</button>
+        <button type="button" class="btn" onclick="amigos()">amigos</button>
+    </div>
+    <br>
+    <div>
+        <button type="button" class="btn" onclick="sair()">Sair</button>
     </div>
 
 
@@ -29,6 +33,9 @@
 
     function perfil() {
         window.location.href = "initial_page.php?modulo=perfil";
+    }
+    function amigos() {
+        window.location.href = "initial_page.php?modulo=amigos";
     }
     function pagina_inicial() {
         window.location.href = "initial_page.php";

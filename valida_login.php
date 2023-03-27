@@ -4,6 +4,8 @@ include("mostrarerros.php");
 
 $nome = $_POST['email'];
 $senha = $_POST['password']; 
+$senha = md5($senha);
+
 if ($conn) {
     echo '<p>Entrou no if</p>';
     $query = mysqli_query($conn, "select * from usuario where email='".$nome."' and senha='".$senha."' ");   
@@ -11,7 +13,12 @@ if ($conn) {
        echo "Login bem sucedido!"; 
        session_start();
 
-    //    $_SESSION['usuario'] = ''
+       $sql = "select * from usuario where email='".$nome."' and senha='".$senha."' ";
+       $result = $conn->query($sql); 
+       $row = $result->fetch_assoc();
+       $_SESSION['usuario'] = $row['nome'];
+       $_SESSION['idusuario'] = $row['id'];
+       
        Header('Location: initial_page.php');
     } else {
         //O login falhou
