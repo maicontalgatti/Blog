@@ -194,7 +194,7 @@ session_start();
 
             <?php
 
-            include 'barra_lateral.php';
+            include 'barra_lateral.php'; 
             if ($_GET['modulo'] == 'perfil') {
                 include 'perfil.php';
             } else if ($_GET['modulo'] == 'amigos') {
