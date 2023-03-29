@@ -57,6 +57,7 @@ session_start();
         .textopost {
             margin-top: 5px;
             height: 40px;
+            
         }
 
         /*estilo de botões*/

@@ -19,7 +19,7 @@ if ($conn) {
        $_SESSION['usuario'] = $row['nome'];
        $_SESSION['idusuario'] = $row['id'];
        
-       Header('Location: initial_page.php');
+       Header('Location: initial_page.php?modulo=');
     } else {
         //O login falhou
         echo "Usuário ou senha inválidos!";
