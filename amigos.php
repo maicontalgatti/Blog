@@ -43,24 +43,18 @@
 
 
         $.ajax({
-            url: "delete_item_horimetro.php",
+            url: "ajax_adcamigo.php",
             method: "POST",
             data: {
                 user1: p1,
                 user2: p2,
-                socilitante: 
+                socilitante: <?php echo $_SESSION['idusuario']?>
             },
             success: function(data) {
                 location.reload();
             }
         });
-        return true;
-
-
-
-
-
-
+        // return true;
         document.getElementById(id_button).innerHTML = 'Solicitação enviada';
     };
 </script>

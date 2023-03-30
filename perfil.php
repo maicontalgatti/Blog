@@ -70,20 +70,21 @@ include("mostrarerros.php");
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc() ;
         // <!--<img src="usuário sem foto.png" alt="Image" height="102" width="102"> 16:30-->
+
        echo '<img class="imgp"src="uploads/'.$row['foto_usuario'].'" >
         <h1 class="titlename" style: >'.$row['nome'].'</h1>
         <h1 class="titlename" style: >'.$row['bio'].'</h1>
         <h1 class="title1"> E-mail: '. $row['email'].'</h1>
         <h1 class="title2">Data de Nascimento: '.$row['datanascimento'].'</h1>
+
+
+       
+
         ';
     } else {
         echo "Não há resultados.";
     }
     $conn->close();
-
-
-
-
 
     //aqui vc pode puxar dados do banco pra ca
     // use esse SQL: SELECT id, email, senha, nome, datanascimento FROM blog.usuario WHERE id = 50;
