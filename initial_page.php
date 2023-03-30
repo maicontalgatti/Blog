@@ -34,14 +34,38 @@ session_start();
         }
 
         /*style do pefil.php*/
-        .title {
-            color: #787878;
-
+        .titlename {
+            color: white;
+            text-align: center;
+           
+            
          
         }
+        .title{
+            color: white;
+            text-align: left;
+            
+        }
+        .title1{
+            margin-top: 190px;
+            color: white;
+        }
+        .title2{
+            
+            color: white;
+        }
         .inputimg{
-            top: 300px;
+            margin-top: 0px;
         
+        }
+        .imgp{
+            width:200px;
+            height:200px;
+            border-radius:90px;
+            margin-left: 39%;
+            margin-top: 0px;
+            
+           
         }
        
         
@@ -89,24 +113,25 @@ session_start();
 
         }
         .inputimg:hover{
-            background: #5a5a5a;
+            background: #1b223c;
         
         }
         /* laber for file*/
         input[type="file"]{
             display: none;
+            
         }
         .lblupload:hover{
-            background: #5a5a5a;
+            background: #1b223c;
         }
        
         .lblupload{
             padding: 8px;
             min-width: 250px;
             max-width: 750px;
-            background: #787878;
+            background:#1E90FF ;
             color: white;
-            
+           margin-top: none;
             cursor: pointer;
             transition: .3s;
             text-align: center;
@@ -116,8 +141,8 @@ session_start();
             text-decoration: none;
             cursor: pointer;
             transition: .3s;
-            
-            background: #787878;
+           
+            background:#1E90FF;
             
             /* left: 82px; */
             /* top: 20px; */
@@ -134,8 +159,8 @@ session_start();
         }
         .frmupload{
             align-self: flex-end;
-            margin-top: 32%;
-            margin-left: 53%;
+            
+            margin-left: 0%;
             min-width: 320px 603px ;
             max-width:800px ;  
                       
@@ -160,12 +185,26 @@ session_start();
             width: 75%;
             margin: 7px;
             border-radius: 5px;
-            background-color: #3c3c3c;
+            /*background-color: #3c3c3c;*/
+            background: linear-gradient(45deg, #87CEEB, #87CEFA, #00BFFF, #1E90FF);
+            background-size: 200% 200%;
+            animation: colors 4s ease infinite;
             height: 100%;
             position: relative;
             padding-top: 15px;
             padding-left: 15px;
             padding-right: 15px;
+        }
+        @keyframes colors{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
         }
 
         .postagem {
