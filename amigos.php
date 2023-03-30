@@ -5,11 +5,14 @@
     <?php
     include("db.php");
     include("mostrarerros.php");
+    //sql de milhões
+//SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario1 ) where u.id = 56 and a.status_amizade = 'v'
 
-    $sql = "SELECT id, email, senha, nome, datanascimento, foto_usuario FROM blog.usuario";
+
+    $sql = "SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario2 ) where a.solicitante = 56 and a.status_amizade = 'v'";
     $result = $conn->query($sql);
-    // Verifica se há resultados
     echo '<p hidden="hidden">' . $_SESSION['idusuario'] . '</p>';
+    // Verifica se há resultados 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
@@ -17,9 +20,28 @@
             <div class="postagem border card-body d-flex flex-column align-items-start"> 
             <h4 class="mb-0"> 
                  ' . $row['nome'] . ' - ' . $row['email'] . '
-               </h4>
-              <!--<p class="card-text mb-auto"></p>-->
-           
+               </h4> 
+            <button id="btn_' . $row['id'] . '"> Amigos </button>
+                </div> 
+                
+                ';
+        }
+    } else {
+        echo "Não há resultados.";
+    } 
+
+
+    $sql = "SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario2 ) where a.solicitante = 56 and a.status_amizade = 'f'";
+    $result = $conn->query($sql);
+    // Verifica se há resultados
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+
+            echo '
+            <div class="postagem border card-body d-flex flex-column align-items-start"> 
+            <h4 class="mb-0"> 
+                 ' . $row['nome'] . ' - ' . $row['email'] . '
+               </h4> 
             <button id="btn_' . $row['id'] . '"onclick="adicionar_amigo(' . $row['id'] . ')"> Adicionar </button>
                 </div> 
                 
@@ -31,6 +53,10 @@
     // Fecha a conexão com o banco de dados
     $conn->close();
 
+
+
+
+    
     ?>
 
 
