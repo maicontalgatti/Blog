@@ -9,7 +9,7 @@
     $sql = "SELECT id, email, senha, nome, datanascimento, foto_usuario FROM blog.usuario";
     $result = $conn->query($sql);
     // Verifica se há resultados
-    echo '<p hidden="hidden">'.$_SESSION['idusuario'].'</p>';
+    echo '<p hidden="hidden">' . $_SESSION['idusuario'] . '</p>';
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
@@ -36,28 +36,33 @@
 
 
 </div>
-
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 <script>
     function adicionar_amigo(id_user) {
         id_button = "btn_" + id_user;
+        id_adicionado = id_user;
+        id_solicitante = <?php echo $_SESSION['idusuario'] ?>;
+      
 
+        // alert ("id_button é "+id_button+" id_adicionado: "+id_adicionado+" id_solicitante "+id_solicitante);
 
         $.ajax({
             url: "ajax_adcamigo.php",
             method: "POST",
             data: {
-                user1: p1,
-                user2: p2,
-                socilitante: <?php echo $_SESSION['idusuario']?>
+                adicionado: id_adicionado,
+                solicitante: id_solicitante
             },
             success: function(data) {
-                location.reload();
+                // location.reload();
+                alert("AJAX sucessful");
+          document.getElementById(id_button).innerHTML = 'Solicitação enviada';
             }
         });
-        // return true;
-        document.getElementById(id_button).innerHTML = 'Solicitação enviada';
+        return true;
     };
 </script>
+
 
 
 </html>
