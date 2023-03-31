@@ -1,10 +1,15 @@
 <html>
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">-->
 <?php
 include("db.php");
 include("mostrarerros.php");
 ?>
 
 <div class="feed border">
+<form  class="frmupload" action="" method="post" enctype="multipart/form-data">
+       <label class="lblupload" for="file" >Selecione uma foto de perfil</label>
+        <input id="file"  type="file" name="arquivo">
+        <input class="inputimg" type="submit" name="enviar">
 
  
 
@@ -56,18 +61,25 @@ include("mostrarerros.php");
 
 
     ?>
+    
+
     <?php
-    $sql = "SELECT id, email, senha, nome, datanascimento, foto_usuario FROM blog.usuario WHERE id = ".$_SESSION['idusuario']."";
+    $sql = "SELECT id, email, senha, nome, datanascimento, foto_usuario, bio FROM blog.usuario WHERE id = ".$_SESSION['idusuario']."";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc() ;
         // <!--<img src="usuário sem foto.png" alt="Image" height="102" width="102"> 16:30-->
 
-       echo '<img src="uploads/'.$row['foto_usuario'].'" style="width:200px;height:200px;border-radius:90px">
-        <h1 class="title">Nome de Usuário:'.$row['nome'].'</h1>
-        <h1 class="title"> E-mail: '. $row['email'].'</h1>
-        <h1 class="title">Data de Nascimento: '.$row['datanascimento'].'</h1>
+       echo '<img class="imgp"src="uploads/'.$row['foto_usuario'].'" >
+        <h1 class="titlename" style: >'.$row['nome'].'</h1>
+        <h1 class="titlename" style: >'.$row['bio'].'</h1>
+        <h1 class="title1"> E-mail: '. $row['email'].'</h1>
+        <h1 class="title2">Data de Nascimento: '.$row['datanascimento'].'</h1>
+
+
+       
+
         ';
     } else {
         echo "Não há resultados.";
@@ -133,10 +145,6 @@ include("mostrarerros.php");
 <br><br><br><br><br><br><br><br><br> -->
 
 
-<form  class="frmupload" action="" method="post" enctype="multipart/form-data">
-       <label class="lblupload" for="file" >Selecione uma foto de perfil</label>
-        <input id="file"  type="file" name="arquivo">
-        <input class="inputimg" type="submit" name="enviar">
 
 </div>
 
