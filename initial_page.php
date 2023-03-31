@@ -135,13 +135,18 @@ session_start();
             cursor: pointer;
             transition: .3s;
             text-align: center;
+            border-radius: 50px;
         }
+       
+            
+
+        
         /*fim da label for file*/
         .inputimg{
-            text-decoration: none;
+            
             cursor: pointer;
             transition: .3s;
-           
+           border-radius: 50px;
             background:#1E90FF;
             
             /* left: 82px; */
