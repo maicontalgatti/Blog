@@ -39,7 +39,7 @@
             </select>
 
             <input type="submit" value="Registrar">
-            <a href="#" id="forgot-pass">Já tem conta ? Faça login</a>
+            <a href="login.php" id="forgot-pass">Já tem conta ? Faça login</a>
             </select>
         </form>
     </div>
