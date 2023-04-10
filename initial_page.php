@@ -190,17 +190,17 @@ session_start();
             width: 75%;
             margin: 7px;
             border-radius: 5px;
-            /*background-color: #3c3c3c;*/
-            background: linear-gradient(45deg, #87CEEB, #87CEFA, #00BFFF, #1E90FF);
+            background-color: #3c3c3c;
+            /*background: linear-gradient(45deg, #87CEEB, #87CEFA, #00BFFF, #1E90FF);*/
             background-size: 200% 200%;
-            animation: colors 4s ease infinite;
+           /* animation: colors 4s ease infinite;*/
             height: 100%;
             position: relative;
             padding-top: 15px;
             padding-left: 15px;
             padding-right: 15px;
         }
-        @keyframes colors{
+      /*  @keyframes colors{
             0%{
                 background-position: 0% 50%;
             }
@@ -210,7 +210,7 @@ session_start();
             100%{
                 background-position: 0% 50%;
             }
-        }
+        }*/
 
         .postagem {
             background: #787878;

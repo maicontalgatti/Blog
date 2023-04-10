@@ -151,16 +151,21 @@ include("mostrarerros.php");
 <br><br><br><br><br><br><br><br><br> -->
 
 </form>
-<form class="frmbio" method="post">
+<form class="frmbio" method="post" action="salva_bio.php">
 
     
-    <textarea type="text" name="textbio" id="txtbio" placeholder="Insira sua Biografia"></textarea>
-    <input class="inputbio" type="submit" name="Salvar">
+    <input type="text" name="textbio" id="txtbio" placeholder="Insira sua Biografia">
+    <input id="slvbio" class="inputbio" type="submit" name="Salvar">
 
    
 
 
 </form>
+
+<?php
+
+
+?>
 
 </div>
 
