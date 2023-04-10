@@ -11,6 +11,11 @@ include("mostrarerros.php");
         <input id="file"  type="file" name="arquivo">
         <input class="inputimg" type="submit" name="enviar">
 
+
+    <!--<form method="post" action="salva_bio.php">
+        <textarea name="Biografia"></textarea>
+        <input type="submit" value="Salvar">
+    </form>-->
  
 
    <!-- <form  class="frmupload" action="" method="post" enctype="multipart/form-data">
@@ -73,14 +78,9 @@ include("mostrarerros.php");
 
        echo '<img class="imgp"src="uploads/'.$row['foto_usuario'].'" >
         <h1 class="titlename" style: >'.$row['nome'].'</h1>
-        <h1 class="titlename" style: >'.$row['bio'].'</h1>
+      <h1 class="titlename" style: >'.$row['bio'].'</h1>
         <h1 class="title1"> E-mail: '. $row['email'].'</h1>
-        <h1 class="title2">Data de Nascimento: '.$row['datanascimento'].'</h1>
-
-
-       
-
-        ';
+        <h1 class="title2">Data de Nascimento: '.$row['datanascimento'].'</h1>';
     } else {
         echo "Não há resultados.";
     }
@@ -136,15 +136,31 @@ include("mostrarerros.php");
             }
         }
     }
+    
+
+    
 
     ?>
+    
+    
+    
 <!-- Registro de uma gambiarra de iniciante
 <br>
 <br>
 <br>
 <br><br><br><br><br><br><br><br><br> -->
 
+</form>
+<form class="frmbio" method="post">
 
+    
+    <textarea type="text" name="textbio" id="txtbio" placeholder="Insira sua Biografia"></textarea>
+    <input class="inputbio" type="submit" name="Salvar">
+
+   
+
+
+</form>
 
 </div>
 
