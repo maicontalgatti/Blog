@@ -7,9 +7,7 @@ include("mostrarerros.php");
 
 <div class="feed border">
 <form  class="frmupload" action="" method="post" enctype="multipart/form-data">
-       <label class="lblupload" for="file" >Selecione uma foto de perfil</label>
         <input id="file"  type="file" name="arquivo">
-        <input class="inputimg" type="submit" name="enviar">
 
 
     <!--<form method="post" action="salva_bio.php">
@@ -76,7 +74,13 @@ include("mostrarerros.php");
         $row = $result->fetch_assoc() ;
         // <!--<img src="usuário sem foto.png" alt="Image" height="102" width="102"> 16:30-->
 
-       echo '<img class="imgp"src="uploads/'.$row['foto_usuario'].'" >
+       echo ' <div class="todo_perfil">
+       <img class="imgp"src="uploads/'.$row['foto_usuario'].'" >       
+        <div class="botoes_perfil">
+       <label class="lblupload" id="botao_lapis" for="file" ><img id="lapis_alt" src="uploads/includes/lapis.png" ></label>
+       <input class="lblupload" id="botao_enviar" type="submit" name="enviar">
+       </div>
+        </div>
         <h1 class="titlename" style: >'.$row['nome'].'</h1>
       <h1 class="titlename" style: >'.$row['bio'].'</h1>
         <h1 class="title1"> E-mail: '. $row['email'].'</h1>
