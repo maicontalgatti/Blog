@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt"> 
+<html lang="pt">
 
 <?php
 session_start();
@@ -16,8 +16,8 @@ session_start();
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
- 
-   
+
+
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +25,29 @@ session_start();
     <!-- Custom styles personal -->
     <link href="css/index.css" rel="stylesheet">
     <style>
+        #lapis_alt{
+            width:30px!important;
+            height:25px!important;
+        }
+        #botao_enviar{
+            height: 40px!important;
+            width: 60px!important;
+            border: none!important;
+            margin-left: 0px!important;
+        }
+        #botao_lapis{  
+            height: 40px!important;
+            width: 50px!important;
+            margin-right: 0px!important;
+        }
+        .botoes_perfil {
+            display: flex;
+        }
+
+        .todo_perfil {
+            display: grid;
+        }
+
         .display {
             display: block;
         }
@@ -37,54 +60,61 @@ session_start();
         .titlename {
             color: white;
             text-align: center;
-           
-            
-         
+
+
+
         }
-        .title{
-            
+
+
+        .title {
+
             color: white;
             text-align: left;
-            
+
         }
+
         .title1{
             position: relative;
             margin-top: 110px;
+
+        }
+
+        .title2 {
+
             color: white;
         }
-        .title2{
-            
-            color: white;
-        }
-        .inputimg{
+
+        .inputimg {
             margin-top: 0px;
-        
+
         }
-        .imgp{
-            position: relative;
-            width:200px;
-            height:200px;
-            border-radius:90px;
-            margin-left: 37%;
-            margin-top: 0px;
-            
-           
+
+
+        .imgp {
+            width: 200px;
+            height: 200px;
+            border-radius: 90px;
+            margin: auto;
+            text-align: center !important;
+            align-items: center !important;
+            align-content: center !important;
+
         }
-       
-        
-        
+
+
+
         /*
         .inputimg{
             width: 200px;
             
         }*/
-            /*fim do estilo perfil.php*/
-        
+        /*fim do estilo perfil.php*/
+
 
         .textopost {
             margin-top: 5px;
             height: 40px;
-            
+
         }
         .txtbio{
             border-radius: 10px;
@@ -132,46 +162,62 @@ session_start();
             background: #5a5a5a;
 
         }
-        .inputimg:hover{
+
+        .inputimg:hover {
             background: #1b223c;
-        
+
         }
+
         /* laber for file*/
-        input[type="file"]{
+        input[type="file"] {
             display: none;
-            
+
         }
-        .lblupload:hover{
+
+        .lblupload:hover {
             background: #1b223c;
         }
-       
-        .lblupload{
+
+        .lblupload {
             padding: 8px;
+
             min-width: 250px;
             max-width: 750px;
             background:#787878 ;
+            background: #1E90FF;
             color: white;
-           margin-top: none;
+            margin-top: none;
             cursor: pointer;
             transition: .3s;
             text-align: center;
             border-radius: 50px;
+            display: flex;
+            width: 50px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
         }
-       
-            
 
-        
+
+
+
         /*fim da label for file*/
-        .inputimg{
-            
+        .inputimg {
+
             cursor: pointer;
             transition: .3s;
+
            border-radius: 50px;
             background:#787878;
             
+
+            border-radius: 50px;
+            background: #1E90FF;
+
+
             /* left: 82px; */
             /* top: 20px; */
-            
+
             min-width: 10%;
             height: 40px;
             color: white;
@@ -182,13 +228,14 @@ session_start();
         .border {
             border: black solid 1px;
         }
-        .frmupload{
+
+        .frmupload {
             align-self: flex-end;
-            
+
             margin-left: 0%;
-            min-width: 320px 603px ;
-            max-width:800px ;  
-                      
+            min-width: 320px 603px;
+            max-width: 800px;
+
         }
 
         .display {
@@ -232,14 +279,15 @@ session_start();
             background-color: #3c3c3c;
             /*background: linear-gradient(45deg, #87CEEB, #87CEFA, #00BFFF, #1E90FF);*/
             background-size: 200% 200%;
-           /* animation: colors 4s ease infinite;*/
+            /* animation: colors 4s ease infinite;*/
             height: 100%;
             position: relative;
             padding-top: 15px;
             padding-left: 15px;
             padding-right: 15px;
         }
-      /*  @keyframes colors{
+
+        /*  @keyframes colors{
             0%{
                 background-position: 0% 50%;
             }
@@ -277,7 +325,7 @@ session_start();
 
             <?php
 
-            include 'barra_lateral.php'; 
+            include 'barra_lateral.php';
             if ($_GET['modulo'] == 'perfil') {
                 include 'perfil.php';
             } else if ($_GET['modulo'] == 'amigos') {

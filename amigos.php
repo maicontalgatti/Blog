@@ -6,10 +6,10 @@
     include("db.php");
     include("mostrarerros.php");
     //sql de milhões
-//SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario1 ) where u.id = 56 and a.status_amizade = 'v'
+    //SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario1 ) where u.id = 56 and a.status_amizade = 'v'
 
 
-    $sql = "SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario2 ) where a.solicitante = 56 and a.status_amizade = 'v'";
+    $sql = "SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario2 ) where a.solicitante = " . $_SESSION['idusuario'] . " and a.status_amizade = 'v'";
     $result = $conn->query($sql);
     echo '<p hidden="hidden">' . $_SESSION['idusuario'] . '</p>';
     // Verifica se há resultados 
@@ -28,7 +28,7 @@
         }
     } else {
         echo "Não há resultados.";
-    } 
+    }
 
 
     $sql = "SELECT * from blog.usuario u inner join amizade a on (u.id = a.idusuario2 ) where a.solicitante = 56 and a.status_amizade = 'f'";
@@ -44,7 +44,6 @@
                </h4> 
             <button id="btn_' . $row['id'] . '"onclick="adicionar_amigo(' . $row['id'] . ')"> Adicionar </button>
                 </div> 
-                
                 ';
         }
     } else {
@@ -56,7 +55,7 @@
 
 
 
-    
+
     ?>
 
 
@@ -68,7 +67,7 @@
         id_button = "btn_" + id_user;
         id_adicionado = id_user;
         id_solicitante = <?php echo $_SESSION['idusuario'] ?>;
-      
+
 
         // alert ("id_button é "+id_button+" id_adicionado: "+id_adicionado+" id_solicitante "+id_solicitante);
 
@@ -82,7 +81,7 @@
             success: function(data) {
                 // location.reload();
                 alert("AJAX sucessful");
-          document.getElementById(id_button).innerHTML = 'Solicitação enviada';
+                document.getElementById(id_button).innerHTML = 'Solicitação enviada';
             }
         });
         return true;
