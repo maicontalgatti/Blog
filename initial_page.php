@@ -65,17 +65,20 @@ session_start();
 
         }
 
+        .title{
 
-        .title {
 
             color: white;
             text-align: left;
 
         }
 
+       
+
         .title1{
             position: relative;
             margin-top: 110px;
+            color: white;
 
         }
 
@@ -181,6 +184,7 @@ session_start();
         .lblupload {
             padding: 8px;
 
+
             min-width: 250px;
             max-width: 750px;
             background:#787878 ;
@@ -207,12 +211,15 @@ session_start();
             cursor: pointer;
             transition: .3s;
 
+
            border-radius: 50px;
             background:#787878;
             
 
             border-radius: 50px;
             background: #1E90FF;
+
+
 
 
             /* left: 82px; */
