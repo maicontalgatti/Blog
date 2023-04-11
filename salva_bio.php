@@ -9,7 +9,7 @@ $conn = mysqli_connect($endereco, $user, $senha, $banco);*/
 
 include("db.php");
 include("mostrarerros.php");
-/*session_start();*/
+session_start();
 $biografia = $_POST['textbio'];
 echo $biografia;
 $user = $_SESSION['idusuario'];

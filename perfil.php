@@ -4,6 +4,9 @@
 include("db.php");
 include("mostrarerros.php");
 ?>
+ <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+
 
 <div class="feed border">
 <form  class="frmupload" action="" method="post" enctype="multipart/form-data">
@@ -23,6 +26,43 @@ include("mostrarerros.php");
         <input  type="file" name="arquivo">
         <input class="inputimg" type="submit" name="enviar">
     </form>-->
+    <div class="pull-right">
+
+<button type="button" class=" btn-xs " data-toggle="modal" data-target="#myModalcad">Adicionar BIO</button>
+</div>
+<div class="modal fade" id="myModalcad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center" id="myModalLabel">Adicionar</h4>
+
+
+
+            </div>
+            <div class="modal-body">
+                <form class="frmbio" method="post" action="salva_bio.php">
+
+    
+                    <input class="txtbio" type="text" name="textbio" id="txtbio" placeholder="Insira sua Biografia">
+                    <input id="slvbio" class="inputbio" type="submit" name="Salvar">
+
+
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
 
     <?php
     if (isset($_POST['enviar'])) {
@@ -151,7 +191,7 @@ include("mostrarerros.php");
 <br><br><br><br><br><br><br><br><br> -->
 
 </form>
-<form class="frmbio" method="post" action="salva_bio.php">
+<!--<form class="frmbio" method="post" action="salva_bio.php">
 
     
     <input type="text" name="textbio" id="txtbio" placeholder="Insira sua Biografia">
@@ -160,7 +200,7 @@ include("mostrarerros.php");
    
 
 
-</form>
+</form>-->
 
 <?php
 

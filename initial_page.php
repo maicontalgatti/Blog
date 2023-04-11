@@ -42,12 +42,14 @@ session_start();
          
         }
         .title{
+            
             color: white;
             text-align: left;
             
         }
         .title1{
-            margin-top: 190px;
+            position: relative;
+            margin-top: 110px;
             color: white;
         }
         .title2{
@@ -59,10 +61,11 @@ session_start();
         
         }
         .imgp{
+            position: relative;
             width:200px;
             height:200px;
             border-radius:90px;
-            margin-left: 39%;
+            margin-left: 37%;
             margin-top: 0px;
             
            
@@ -83,6 +86,18 @@ session_start();
             height: 40px;
             
         }
+        .txtbio{
+            border-radius: 10px;
+        }
+        .inputbio{
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s;
+            
+        }
+        .inputbio:hover{
+            background: #67a8cd;
+        }
 
         /*estilo de botões*/
         .btn {
@@ -102,8 +117,13 @@ session_start();
             color: white;
 
         }
-
-
+       
+        .modal-header{
+            background: #EEEEEE;
+        }
+        .modal-body{
+            background: #EEEEEE;
+        }
         .btn:hover {
             background: #5a5a5a;
         }
@@ -129,7 +149,7 @@ session_start();
             padding: 8px;
             min-width: 250px;
             max-width: 750px;
-            background:#1E90FF ;
+            background:#787878 ;
             color: white;
            margin-top: none;
             cursor: pointer;
@@ -147,7 +167,7 @@ session_start();
             cursor: pointer;
             transition: .3s;
            border-radius: 50px;
-            background:#1E90FF;
+            background:#787878;
             
             /* left: 82px; */
             /* top: 20px; */
@@ -184,6 +204,25 @@ session_start();
             height: 100%;
             border-radius: 5px;
             background-color: #3c3c3c;
+        }
+        .btn-xs:hover{
+            background: #1b223c;
+        }
+        .btn-xs{
+            width: 20%;
+            border: none;
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 50px;
+            background: #787878;
+            position: relative;
+            /* left: 82px; */
+            /* top: 20px; */
+            border-radius: 45px;
+            height: 40px;
+            color: white;
         }
 
         .feed {
