@@ -11,8 +11,10 @@ include("db.php");
 include("mostrarerros.php");
 session_start();
 $biografia = $_POST['textbio'];
-echo $biografia;
+// echo $biografia;
 $user = $_SESSION['idusuario'];
 $result_usuario= "UPDATE blog.usuario SET bio='".$biografia."' WHERE id=".$user."";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
+
+Header('Location: initial_page.php?modulo=perfil');
 ?>
