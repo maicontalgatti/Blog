@@ -25,21 +25,21 @@ include("mostrarerros.php");
         <input  type="file" name="arquivo">
         <input class="inputimg" type="submit" name="enviar">
     </form>-->
-        <div class="pull-right">
-
-            <button type="button" class=" btn-xs " data-toggle="modal" data-target="#myModalcad">Adicionar BIO</button>
-        </div>
+       
         <div class="modal fade" id="myModalcad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
+                    <h4 class="modal-title text-center" id="myModalLabel">Adicionar</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-center" id="myModalLabel">Adicionar</h4>
+                      
                     </div>
                     <div class="modal-body">
                         <form class="frmbio" method="post" action="salva_bio.php">
+                        
                             <input class="txtbio" type="text" name="textbio" id="txtbio" placeholder="Insira sua Biografia">
-                            <input id="slvbio" class="inputbio" type="submit" name="Salvar">
+                             <input id="slvbio" class="inputbio" type="submit" name="Salvar">
+                           
                         </form>
                     </div>
                 </div>
@@ -105,6 +105,10 @@ include("mostrarerros.php");
         </div>
         <h1 class="titlename" style: >' . $row['nome'] . '</h1>
       <h1 class="titlename" style: >' . $row['bio'] . '</h1>
+      <div class="pull-right">
+
+      <button type="button" class=" btn-xs " data-toggle="modal" data-target="#myModalcad"> BIO</button>
+  </div>
         <h1 class="title1"> E-mail: ' . $row['email'] . '</h1>
         <h1 class="title2">Data de Nascimento: ' . $row['datanascimento'] . '</h1>';
         } else {

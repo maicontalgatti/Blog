@@ -47,6 +47,14 @@ session_start();
         .todo_perfil {
             display: grid;
         }
+        .modal-footer{
+            height: 180px;
+        }
+        .btnpost{
+            position: relative;
+            margin-top: 15%;
+            border-radius: 0.25rem;
+        }
 
         .display {
             display: block;
@@ -121,8 +129,15 @@ session_start();
         }
         .txtbio{
             border-radius: 10px;
+            position: relative;
+            width: 100%;
         }
+        
         .inputbio{
+            position: relative;
+            margin-top: 10px;
+            margin-left: 88%;
+          
             border-radius: 10px;
             cursor: pointer;
             transition: .3s;
@@ -185,9 +200,8 @@ session_start();
             padding: 8px;
 
 
-            min-width: 250px;
-            max-width: 750px;
-            background:#787878 ;
+          
+           
             background: #1E90FF;
             color: white;
             margin-top: none;
@@ -262,19 +276,31 @@ session_start();
         .btn-xs:hover{
             background: #1b223c;
         }
+        .pull-right{
+            text-align: center;
+        }
+      
+        .modal-body{
+            height: 100px;
+        }
+        
+        
+        
         .btn-xs{
-            width: 20%;
+            
+            
+            width: 70px;
             border: none;
             padding: 10px;
             text-decoration: none;
             cursor: pointer;
             transition: .3s;
             border-radius: 50px;
-            background: #787878;
-            position: relative;
+            background: #1E90FF;
+            /* position: absolute; */
             /* left: 82px; */
             /* top: 20px; */
-            border-radius: 45px;
+         
             height: 40px;
             color: white;
         }
@@ -382,7 +408,7 @@ session_start();
                     </div>
                     <div class="modal-footer">
                         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                        <button type="submit">Postar</button>
+                        <button class="btnpost" type="submit">Postar</button>
                     </div>
                 </form>
             </div>
