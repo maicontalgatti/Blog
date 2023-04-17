@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-session_destroy();
+/*session_destroy();*/
 ?>
 <head>
     <meta charset="UTF-8">
