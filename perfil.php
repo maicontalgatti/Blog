@@ -19,7 +19,7 @@ include("mostrarerros.php");
         <input type="submit" value="Salvar">
     </form>-->
 
-
+teste tes
         <!-- <form  class="frmupload" action="" method="post" enctype="multipart/form-data">
        <label class="lblupload" style="color:#787878">Selecione uma foto de perfil</label>
         <input  type="file" name="arquivo">
