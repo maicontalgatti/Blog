@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <?php 
 /*session_destroy();*/
 ?>
@@ -10,8 +10,7 @@
     <title>LOGIN</title>
     <!-- Essa referencia é pra estilização externa -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-    </link>
-    <!-- aqui falta coloca ro caminho completo: "css/styles.css" -->
+    </link> 
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -26,11 +25,7 @@
             <a href="esqueceu_senah.php" id="forgot-pass">Esqueceu a senha?</a>
             <input type="submit" value="Login">
         </form>
-        <div id="social-container">
-            <!-- <p> Ou entre usando suas redes sociais</p> -->
-            <!-- <i class="fa fa-facebook-f"></i> -->
-            <!-- <i class="fa fa-linkedin"></i> -->
- 
+        <div id="social-container">  
         </div>
         <div id="regiter-container">
             <p> Ainda não tem uma conta?</p>
@@ -39,12 +34,5 @@
         </div>
 
     </div>
-</body>
-<script>
-    // function esqueceusenha(){
-    //     alert('Função indisponível no momento, tente novamente mais tarde');
-    // }
-    
-    </script>
-
+</body>  
 </html>
