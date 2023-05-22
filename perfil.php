@@ -1,15 +1,11 @@
 <html>
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">-->
 <?php
 include("db.php");
 include("mostrarerros.php");
 ?>
 <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
-
-
-
 <div class="feed border">
-    <form class="frmupload" action="" method="post" enctype="multipart/form-data">
+    
         <input id="file" type="file" name="arquivo">
 
 
@@ -17,9 +13,7 @@ include("mostrarerros.php");
         <!--<form method="post" action="salva_bio.php">
         <textarea name="Biografia"></textarea>
         <input type="submit" value="Salvar">
-    </form>-->
-
-teste tes
+    </form>--> 
         <!-- <form  class="frmupload" action="" method="post" enctype="multipart/form-data">
        <label class="lblupload" style="color:#787878">Selecione uma foto de perfil</label>
         <input  type="file" name="arquivo">
@@ -96,11 +90,18 @@ teste tes
             $row = $result->fetch_assoc();
             // <!--<img src="usuário sem foto.png" alt="Image" height="102" width="102"> 16:30-->
 
-            echo ' <div class="todo_perfil">
+            echo ' 
+            <form class="frmupload" action="" method="post" enctype="multipart/form-data">
+            <div class="todo_perfil">
        <img class="imgp"src="uploads/' . $row['foto_usuario'] . '" >       
         <div class="botoes_perfil">
-       <label class="lblupload" id="botao_lapis" for="file" ><img id="lapis_alt" src="uploads/includes/lapis.png" ></label>
+         
+        <label class="lblupload" for="file" >
+        <input type="file" id="botao_lapis"  name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg" />
+        </label> 
+        <!--<label class="lblupload" for="file" ><img id="lapis_alt" src="uploads/includes/lapis.png" ></label>-->
        <input class="lblupload" id="botao_enviar" type="submit" name="enviar">
+       </form>
        </div>
         </div>
         <h1 class="titlename" style: >' . $row['nome'] . '</h1>
