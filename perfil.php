@@ -8,8 +8,7 @@ include("mostrarerros.php");
     
         <input id="file" type="file" name="arquivo">
 
-
-        </form>
+ 
         <!--<form method="post" action="salva_bio.php">
         <textarea name="Biografia"></textarea>
         <input type="submit" value="Salvar">
@@ -44,11 +43,11 @@ include("mostrarerros.php");
         <?php
         if (isset($_POST['enviar'])) {
             //print_r($_FILES);
-            if (!empty($_FILES['arquivo']['name'])) {
-                $nomeArquivo = $_FILES['arquivo']['name'];
-                $tipo = $_FILES['arquivo']['type'];
-                $nomeTemporario = $_FILES['arquivo']['tmp_name'];
-                $tamanho = $_FILES['arquivo']['size'];
+            if (!empty($_FILES['arquivos']['name'])) {
+                $nomeArquivo = $_FILES['arquivos']['name'];
+                $tipo = $_FILES['arquivos']['type'];
+                $nomeTemporario = $_FILES['arquivos']['tmp_name'];
+                $tamanho = $_FILES['arquivos']['size'];
                 $erros = array();
 
                 $tamanoMaximo = 1024 * 1024 * 5;
@@ -57,11 +56,11 @@ include("mostrarerros.php");
                 }
             }
             if (!empty($erros)) {
+                echo '<p>ERRRROO</p>';
                 foreach ($erros as $erro) {
                     echo $erro;
                 }
-            } else {
-
+            } else { 
                 $caminho = "uploads/";
                 if (move_uploaded_file($nomeTemporario, $caminho . $nomeArquivo)) {
                     //echo "Upload feito com sucesso";
@@ -91,17 +90,17 @@ include("mostrarerros.php");
             // <!--<img src="usuário sem foto.png" alt="Image" height="102" width="102"> 16:30-->
 
             echo ' 
-            <form class="frmupload" action="" method="post" enctype="multipart/form-data">
-            <div class="todo_perfil">
-       <img class="imgp"src="uploads/' . $row['foto_usuario'] . '" >       
-        <div class="botoes_perfil">
-         
-        <label class="lblupload" for="file" >
-        <input type="file" id="botao_lapis"  name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg" />
-        </label> 
-        <!--<label class="lblupload" for="file" ><img id="lapis_alt" src="uploads/includes/lapis.png" ></label>-->
-       <input class="lblupload" id="botao_enviar" type="submit" name="enviar">
-       </form>
+            <form class="frmupload"  method="post" enctype="multipart/form-data">
+                <div class="todo_perfil">
+                <img class="imgp"src="uploads/' . $row['foto_usuario'] . '" >       
+                <div class="botoes_perfil">
+                
+                <label class="lblupload" for="arquivos" >
+                  <input type="file" id="arquivos"  name="arquivos" class="btn btn-success"  accept="image/*" />
+                </label> 
+                 
+                <input class="lblupload" id="botao_enviar" type="submit" name="enviar">
+       
        </div>
         </div>
         <h1 class="titlename" style: >' . $row['nome'] . '</h1>
@@ -157,7 +156,7 @@ include("mostrarerros.php");
 
                 $caminho = "uploads/";
                 if (move_uploaded_file($nomeTemporario, $caminho . $nomeImagem)) {
-                    // echo "Upload feito com sucesso";
+                     echo "Upload feito com sucesso";
                 } else {
                     echo "Erro ao enviar";
                 }
@@ -184,14 +183,10 @@ include("mostrarerros.php");
     <input id="slvbio" class="inputbio" type="submit" name="Salvar">
 
    
+    -->
 
-
-</form>-->
-
-    <?php
-
-
-    ?>
+</form>
+ 
 
 </div>
 
