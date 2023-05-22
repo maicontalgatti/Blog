@@ -95,8 +95,9 @@ include("mostrarerros.php");
                 <img class="imgp"src="uploads/' . $row['foto_usuario'] . '" >       
                 <div class="botoes_perfil">
                 
-                <label class="lblupload" for="arquivos" >
-                  <input type="file" id="arquivos"  name="arquivos" class="btn btn-success"  accept="image/*" />
+                <label class="lblupload" for="arquivos"  >
+                  <input type="file" id="arquivos"  name="arquivos" class="btn btn-success"  accept="image/*"  />
+                  <img id="lapis_alt" src="uploads/includes/lapis.png" style="margin:auto">
                 </label> 
                  
                 <input class="lblupload" id="botao_enviar" type="submit" name="enviar">
