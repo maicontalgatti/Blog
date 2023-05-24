@@ -22,7 +22,7 @@ session_destroy();
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="off">
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Digite sua senha">
-            <a href="esqueceu_senah.php" id="forgot-pass">Esqueceu a senha?</a>
+            <!-- <a href="esqueceu_senah.php" id="forgot-pass">Esqueceu a senha?</a> -->
             <input type="submit" value="Login">
         </form>
         <div id="social-container">  
